@@ -15,6 +15,9 @@ $(function() {
         }else if(hash == "#dsp"){
             $('#content').load('pagedata/dsp.html');
             setTitle("開発者支援プログラム(DSP)");
+        }else if(hash == "#dsp"){
+            $('#content').load('pagedata/dsp-request.html');
+            setTitle("DSP参加申請フォーム");
         }else{
             //アンカが引っ掛からなかったときの処理
             $('#content').load('pagedata/main.html?1');
@@ -48,6 +51,11 @@ $(function() {
     $("div").on("click", 'a[href="#dsp"]', function() {
         $('#content').load('pagedata/dsp.html');
         setTitle("開発者支援プログラム");
+    });
+
+    $("div").on("click", 'a[href="#dsp-request"]', function() {
+        $('#content').load('pagedata/dsp-request.html');
+        setTitle("DSP参加申請フォーム");
     });
     //ここまで
 
