@@ -1,7 +1,7 @@
 $(function() {
     var hash = location.hash;
     var title_prefix = " / G-Second";
-
+    alert(hash);
     if(hash == ""){
         //アンカがない時の処理
         $(document).ready(function(){
