@@ -23,6 +23,7 @@ $(function() {
         }
 
     }else{
+        alert("あああああああ！");
         //アンカがない時の処理
         $(document).ready(function(){
             $('#content').load('pagedata/main.html?1');
