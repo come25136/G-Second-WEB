@@ -15,7 +15,7 @@ $(function() {
         }else if(hash == "#dsp"){
             $('#content').load('pagedata/dsp.html');
             setTitle("開発者支援プログラム(DSP)");
-        }else if(hash == "#dsp"){
+        }else if(hash == "#dsp-request"){
             $('#content').load('pagedata/dsp-request.html');
             setTitle("DSP参加申請フォーム");
         }else{
