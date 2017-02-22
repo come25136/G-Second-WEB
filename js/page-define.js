@@ -2,14 +2,7 @@ $(function() {
     var hash = location.hash;
     var title_prefix = " / G-Second";
     alert(hash);
-    if(!hash){
-        //アンカがない時の処理
-        $(document).ready(function(){
-            $('#content').load('pagedata/main.html?1');
-            setTitle("トップページ");
-        });
-
-    }else{
+    if(hash){
         //アンカがある時の処理
         if(hash == "#main"){
             $('#content').load('pagedata/main.html?1');
@@ -28,6 +21,13 @@ $(function() {
             $('#content').load('pagedata/main.html?1');
             setTitle("トップページ");
         }
+
+    }else{
+        //アンカがない時の処理
+        $(document).ready(function(){
+            $('#content').load('pagedata/main.html?1');
+            setTitle("トップページ");
+        });
     }
 
     //ここからリンクがクリックされたときの処理
