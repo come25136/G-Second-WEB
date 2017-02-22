@@ -1,59 +1,65 @@
 $(function() {
+
     var hash = location.hash;
     var title_prefix = " / G-Second";
+
+    var $content = $("#content");
+    var $div = $("div");
+    var $title = $("title");
+
     if(hash){
         //アンカがある時の処理
         if(hash == "#main"){
-            $('#content').load('pagedata/main.html?1');
+            $content.load('pagedata/main.html?1');
             setTitle("トップページ");
         }else if(hash == "#about"){
-            $('#content').load('pagedata/about.html');
+            $content.load('pagedata/about.html');
             setTitle("G-Secondについて");
         }else if(hash == "#members"){
-            $('#content').load('pagedata/members.html');
+            $content.load('pagedata/members.html');
             setTitle("メンバー");
         }else if(hash == "#dsp"){
-            $('#content').load('pagedata/dsp.html');
+            $content.load('pagedata/dsp.html');
             setTitle("開発者支援プログラム(DSP)");
         }else if(hash == "#dsp-request"){
-            $('#content').load('pagedata/dsp-request.html');
+            $content.load('pagedata/dsp-request.html');
             setTitle("DSP参加申請フォーム");
         }else{
             //アンカが引っ掛からなかったときの処理
-            $('#content').load('pagedata/main.html?1');
+            $content.load('pagedata/main.html?1');
             setTitle("トップページ");
         }
 
     }else{
         //アンカがない時の処理
         $(document).ready(function(){
-            $('#content').load('pagedata/main.html?1');
+            $content.load('pagedata/main.html?1');
             setTitle("トップページ");
         });
     }
 
     //ここからリンクがクリックされたときの処理
-    $("div").on("click", 'a[href="#main"]', function() {
-        $('#content').load('pagedata/main.html?1');
+    $div.on("click", 'a[href="#main"]', function() {
+        $content.load('pagedata/main.html?1');
         setTitle("トップページ");
     });
 
-    $("div").on("click", 'a[href="#about"]', function() {
+    $div.on("click", 'a[href="#about"]', function() {
         $('#content').load('pagedata/about.html');
         setTitle("G-Secondについて");
     });
 
-    $("div").on("click", 'a[href="#members"]', function() {
+    $div.on("click", 'a[href="#members"]', function() {
         $('#content').load('pagedata/members.html');
         setTitle("メンバー");
     });
 
-    $("div").on("click", 'a[href="#dsp"]', function() {
+    $div.on("click", 'a[href="#dsp"]', function() {
         $('#content').load('pagedata/dsp.html');
         setTitle("開発者支援プログラム");
     });
 
-    $("div").on("click", 'a[href="#dsp-request"]', function() {
+    $div.on("click", 'a[href="#dsp-request"]', function() {
         $('#content').load('pagedata/dsp-request.html');
         setTitle("DSP参加申請フォーム");
     });
@@ -68,7 +74,7 @@ $(function() {
             _title = title;
         }
         
-        $("title").text(_title + title_prefix);
+        $title.text(_title + title_prefix);
 
         return;
     }
