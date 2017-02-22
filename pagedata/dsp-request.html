@@ -1,0 +1,82 @@
+<div class="container">
+    <h1 class="page-header">DSP参加申請フォーム</h1>
+    <p><a href="#dsp">こちら</a>のページをよくご覧になって申請してください。</p>
+
+    <form>
+
+            <h2>必須事項</h2>
+            <div class="form-group">
+                <label for="inputName" class="col-lg-2 control-label">お名前</label>
+                <div class="col-lg-10 col-bottom">
+                    <input type="email" class="form-control" id="inputName" placeholder="お名前">
+                </div>
+            </div>
+
+            <div class="form-group">
+                <label for="inputEmail" class="col-lg-2 control-label">メールアドレス</label>
+                <div class="col-lg-10 col-bottom">
+                    <input type="text" class="form-control" id="inputEmail" placeholder="メールアドレス">
+                    <span class="help-block">審査結果をお知らせする際に利用します。</span>
+                </div>
+            </div>
+
+            <h2>アプリケーションについて</h2>
+
+            <div class="form-group">
+                <label for="inputAppName" class="col-lg-2 control-label">アプリケーション名</label>
+                <div class="col-lg-10 col-bottom">
+                    <input type="text" class="form-control" id="inputAppName" placeholder="アプリケーション名">
+                </div>
+            </div>
+
+            <div class="form-group">
+                <label for="inputAppName" class="col-lg-2 control-label">アプリケーションの説明</label>
+                <div class="col-lg-10 col-bottom">
+                    <textarea class="form-control" rows="3" id="textArea"></textarea>
+                    <span class="help-block">アプリケーションを審査する際に利用します。</span>
+                </div>
+            </div>
+
+            <div class="form-group">
+                <label class="col-lg-2 control-label">プラットフォーム</label>
+                <div class="col-lg-10 col-bottom">
+                    <div class="radio">
+                        <label>
+                            <input type="radio" name="optionsRadios" id="optionsRadios1" value="option1" checked="">
+                            Google Playストア
+                        </label>
+                    </div>
+                    <div class="radio">
+                        <label>
+                            <input type="radio" name="optionsRadios" id="optionsRadios2" value="option2">
+                            Chrome ウェブストア
+                        </label>
+                    </div>
+                </div>
+            </div>
+
+            <h2>利用規約に同意</h2>
+            <h3>Google Play デベロッパー販売 / 配布契約</h3>
+            <div class="embed-responsive embed-responsive-16by9">
+                <iframe class="embed-responsive-item" src="https://play.google.com/about/developer-distribution-agreement.html"></iframe>
+            </div>
+            <h3>Google Chrome Web Store Developer Agreement</h3>
+            <a class="btn btn-default" href="https://developer.chrome.com/webstore/terms" target="_blank">利用規約を確認する</a>
+
+            <div class="form-group">
+                <div class="checkbox col-bottom">
+                    <label>
+                        <input type="checkbox"> 該当するプラットフォームの利用規約に同意する
+                    </label>
+                </div>
+            </div>
+
+            <div class="form-group">
+                <div class="col-lg-12 text-center col-bottom">
+                    <button type="submit" class="btn btn-primary">申請(確認メールが送信されます)</button>
+                </div>
+            </div>
+
+        </div>
+    </form>
+</div>
