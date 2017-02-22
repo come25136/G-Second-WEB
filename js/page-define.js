@@ -1,7 +1,6 @@
 $(function() {
     var hash = location.hash;
     var title_prefix = " / G-Second";
-    alert(hash);
     if(hash){
         //アンカがある時の処理
         if(hash == "#main"){
@@ -23,7 +22,6 @@ $(function() {
         }
 
     }else{
-        alert("あああああああ！");
         //アンカがない時の処理
         $(document).ready(function(){
             $('#content').load('pagedata/main.html?1');
