@@ -14,7 +14,7 @@ $(function() {
             setTitle("メンバー");
         }else if(hash == "#dsp"){
             $('#content').load('pagedata/dsp.html');
-            setTitle("開発者支援プログラム(DSP)");
+            setTitle("開発者支援プログラム");
         }else{
             //アンカが引っ掛からなかったときの処理
             $('#content').load('pagedata/main.html?1');
