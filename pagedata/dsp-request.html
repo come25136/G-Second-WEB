@@ -2,20 +2,20 @@
     <h1 class="page-header">DSP参加申請フォーム</h1>
     <p><a href="#dsp">こちら</a>のページをよくご覧になって申請してください。</p>
 
-    <form>
+    <form action="dsp/api.php" method="POST">
 
             <h2>必須事項</h2>
             <div class="form-group">
                 <label for="inputName" class="col-lg-2 control-label">お名前</label>
                 <div class="col-lg-10 col-bottom">
-                    <input type="text" class="form-control" id="inputName" placeholder="お名前" required>
+                    <input type="text" class="form-control" id="inputName" placeholder="お名前" name="name" required>
                 </div>
             </div>
 
             <div class="form-group">
                 <label for="inputEmail" class="col-lg-2 control-label">メールアドレス</label>
                 <div class="col-lg-10 col-bottom">
-                    <input type="email" class="form-control" id="inputEmail" placeholder="メールアドレス" required>
+                    <input type="email" class="form-control" id="inputEmail" placeholder="メールアドレス" name="mail" required>
                     <span class="help-block">審査結果をお知らせする際に利用します。</span>
                 </div>
             </div>
@@ -25,14 +25,14 @@
             <div class="form-group">
                 <label for="inputAppName" class="col-lg-2 control-label">アプリケーション名</label>
                 <div class="col-lg-10 col-bottom">
-                    <input type="text" class="form-control" id="inputAppName" placeholder="アプリケーション名" required>
+                    <input type="text" class="form-control" id="inputAppName" placeholder="アプリケーション名" name="appname" required>
                 </div>
             </div>
 
             <div class="form-group">
                 <label for="inputAppName" class="col-lg-2 control-label">アプリケーションの説明</label>
                 <div class="col-lg-10 col-bottom">
-                    <textarea class="form-control" rows="3" id="textArea" required></textarea>
+                    <textarea class="form-control" rows="3" id="textArea" name="appdetail" required></textarea>
                     <span class="help-block">アプリケーションを審査する際に利用します。</span>
                 </div>
             </div>
@@ -42,13 +42,13 @@
                 <div class="col-lg-10 col-bottom">
                     <div class="radio">
                         <label>
-                            <input type="radio" name="optionsRadios" id="optionsRadios1" value="option1" checked="">
+                            <input type="radio" name="optionsRadios" id="optionsRadios1" value="gps" name="platform" checked="">
                             Google Playストア
                         </label>
                     </div>
                     <div class="radio">
                         <label>
-                            <input type="radio" name="optionsRadios" id="optionsRadios2" value="option2">
+                            <input type="radio" name="optionsRadios" id="optionsRadios2" value="cws"name="platform">
                             Chrome ウェブストア
                         </label>
                     </div>
@@ -66,7 +66,7 @@
             <div class="form-group">
                 <div class="checkbox col-bottom">
                     <label>
-                        <input type="checkbox" required> 該当するプラットフォームの利用規約に同意する
+                        <input type="checkbox" name="terms" required> 該当するプラットフォームの利用規約に同意する
                     </label>
                 </div>
             </div>
