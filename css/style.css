@@ -35,14 +35,6 @@
 	font-size: 5em;
 }
 
-.container {
-  width: auto;
-  max-width: 680px;
-  padding: 0 15px;
-}
-.container .text-muted {
-  margin: 20px 0;
-}
 .footer-dark a:link,
 .footer-dark a:visited,
 .footer-dark a:active {
